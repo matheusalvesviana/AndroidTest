@@ -5,19 +5,23 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.matheus.androidtest.R;
 import com.example.matheus.androidtest.activity.util.Util;
-import com.example.matheus.androidtest.adapter.TwitchAdapter;
+import com.example.matheus.androidtest.database.IFavoritosDatabase;
 import com.squareup.picasso.Picasso;
 
 public class GameActivity extends AppCompatActivity{
 
     private static final String TAG = "GameActivity";
+
+    @Override
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,13 +48,17 @@ public class GameActivity extends AppCompatActivity{
             actionBar.setIcon(R.drawable.ic_launcher_background);
         }
 
+    int a = IFavoritosDatabase.getFavorite(IFavoritosDatabase.AppDatabase.getAppDatabase(this.getApplicationContext()),Integer.parseInt(getIntent().getStringExtra("game_id")));
+        String b = String.valueOf(a);
+        Toast.makeText(this.getApplicationContext(), b,
+                Toast.LENGTH_LONG).show();
     }
 
-   
-            
-            
-        
-    
+
+
+
+
+
 
 
 }

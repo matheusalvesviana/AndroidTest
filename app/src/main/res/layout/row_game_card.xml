@@ -31,14 +31,15 @@
         android:layout_height="200dp"
         android:background="#EEEEEE" />
 
-        <ImageView
-            android:layout_alignParentTop="true"
+        <CheckBox
             android:id="@+id/img_favorite"
+            android:layout_alignParentTop="true"
             android:layout_above="@id/txt_game_name"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="top|right"
-            android:src="@drawable/ico_fav_off"/>
+            android:button="@null"
+            android:background="@drawable/selector_favorite"/>
     </FrameLayout>
 
     <!-- TextView Game Name -->

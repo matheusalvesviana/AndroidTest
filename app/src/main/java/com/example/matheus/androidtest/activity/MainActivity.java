@@ -81,10 +81,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*Method to generate List of employees using RecyclerView with custom adapter*/
-    private void generateTwitchList(ArrayList<Top> empDataList) {
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_employee_list);
+    private void generateTwitchList(ArrayList<Top> gameDataList) {
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_game_list);
 
-        adapter = new TwitchAdapter(empDataList);
+        adapter = new TwitchAdapter(gameDataList);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
 

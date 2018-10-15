@@ -18,6 +18,18 @@ public class Game {
     @Expose
     private int popularity;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @SerializedName("_id")
+    @Expose
+    private int id;
+
 
     public Box getBox() {
         return box;
